@@ -1,0 +1,72 @@
+--App.jsx
+
+import React, { useState } from 'react';
+import './index.css'
+function App() {
+    const naam = " ";
+    const [name, setNew] = useState(naam);
+    const purple = '#ab90d9';
+    const [purp, setcolo] = useState(purple);
+    const plp = '#98abf5';
+    const [pur, setcolos] = useState(plp);
+    const [cbtn, setName] = useState('Click');
+    const mar = "";
+    const [marq, setmar] = useState(mar);
+    const clickD = () => {
+        setTimeout(function () {
+            let set = 'Clicked';
+            setName(set);
+            let newC = '#e00aad';
+            setcolo(newC);
+            let names = "Prabhat Welcome To Our Website";
+            setNew(names);
+            let colos = "#9d00d1";
+            setcolos(colos);
+            var  setmarq = "Thank You For Visiting!!";
+            setmar(setmarq);
+        }, 3000);
+
+    };
+    return (
+        <>
+            <div style={{ backgroundColor: pur }}>
+                <h1>Hello !! {name}</h1>
+                <button style={{ backgroundColor: purp }} onClick={clickD}>{cbtn}</button>
+                <marquee>{marq}</marquee>
+            </div>
+        </>
+    );
+};
+export default App;
+
+--index.css
+
+button
+{
+    text-align: center;
+    margin: 17% 43.5%;
+    padding:0.6% 3%;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+button:hover
+{
+    border: 3px solid #001d9e;
+    border-radius: 15px;
+}
+h1
+{
+    font-size: 45px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    font-style: normal;
+    color: rgb(0, 153, 102);
+    text-align: center;
+}
+
+marquee
+{
+    margin-top:1.5%;
+    background-image:linear-gradient(120deg,rgb(1, 221, 118),rgb(0, 225, 255),rgb(0, 140, 255));
+    font-size: 45px;
+}
